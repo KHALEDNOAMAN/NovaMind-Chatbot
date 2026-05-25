@@ -2,23 +2,23 @@
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![NLTK](https://img.shields.io/badge/NLTK-154360?style=for-the-badge&logoColor=white)
+![Groq](https://img.shields.io/badge/Groq-000000?style=for-the-badge&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-> **An intelligent conversational AI assistant with NLP-powered intent classification, sentiment analysis, named entity recognition, and a beautiful real-time web interface.**
+> **An intelligent conversational AI assistant powered by Groq (Llama 3 70B) with NLP-powered intent classification, sentiment analysis, named entity recognition, and a beautiful real-time web interface.**
 
 ---
 
 ## 🎯 Overview
 
-NovaMind is a full-stack AI chatbot built with Python and Flask. It uses **Natural Language Processing (NLP)** techniques to understand user messages, classify intents, analyze sentiment, extract entities, and generate intelligent responses. The web interface features a modern dark-themed design with real-time NLP analysis visualization.
+NovaMind is a full-stack AI chatbot built with Python and Flask. It uses **Groq's Llama 3 70B** model for intelligent responses and local **Natural Language Processing (NLP)** techniques to classify intents, analyze sentiment, extract entities, and provide real-time analytics. The web interface features a modern dark-themed design with live NLP analysis visualization.
 
 ## ✨ Key Features
 
 | Feature | Description |
 |---------|-------------|
-| 🎯 **Intent Classification** | TF-IDF vectorization + cosine similarity to understand user intent |
+| 🤖 **AI-Powered Responses** | Groq API with Llama 3 70B for smart, contextual answers |
 | 😊 **Sentiment Analysis** | Detects positive, negative, and neutral emotions in text |
 | 🔍 **Entity Recognition** | Extracts names, numbers, emails, URLs, dates from messages |
 | 🧠 **Context Memory** | Remembers conversation history for contextual responses |
@@ -40,6 +40,7 @@ The chatbot features a 3-panel layout:
 |-----------|---------|
 | Python 3.9+ | Core language |
 | Flask | Web server & REST API |
+| Groq API | Llama 3 70B language model |
 | NLTK | Tokenization, lemmatization, stopword removal |
 | Scikit-learn | TF-IDF vectorization & cosine similarity |
 | NumPy | Numerical computations |
