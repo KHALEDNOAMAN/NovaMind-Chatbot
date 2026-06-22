@@ -1,8 +1,8 @@
-# 🧠 NovaMind — AI Assistant Chatbot
+# NovaMind - AI Assistant Chatbot
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![Groq](https://img.shields.io/badge/Groq-000000?style=for-the-badge&logoColor=white)
+![Groq](https://img.shields.io/badge/Groq_AI-000000?style=for-the-badge&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
@@ -10,81 +10,74 @@
 
 ---
 
-## 🎯 Overview
+## Overview
 
 NovaMind is a full-stack AI chatbot built with Python and Flask. It uses **Groq's Llama 3 70B** model for intelligent responses and local **Natural Language Processing (NLP)** techniques to classify intents, analyze sentiment, extract entities, and provide real-time analytics. The web interface features a modern dark-themed design with live NLP analysis visualization.
 
-## ✨ Key Features
+## Key Features
 
 | Feature | Description |
 |---------|-------------|
-| 🤖 **AI-Powered Responses** | Groq API with Llama 3 70B for smart, contextual answers |
-| 😊 **Sentiment Analysis** | Detects positive, negative, and neutral emotions in text |
-| 🔍 **Entity Recognition** | Extracts names, numbers, emails, URLs, dates from messages |
-| 🧠 **Context Memory** | Remembers conversation history for contextual responses |
-| 📊 **Real-time Analytics** | Live stats: message count, sentiment distribution, entity count |
-| 🎨 **Beautiful Web UI** | Dark-themed glassmorphism design with smooth animations |
-| 🔌 **REST API** | JSON API endpoints for chat, analysis, and statistics |
-| 📚 **Expandable Knowledge Base** | Easy to add new topics and responses |
+| **AI-Powered Responses** | Groq API with Llama 3 70B for smart, contextual answers |
+| **Sentiment Analysis** | Detects positive, negative, and neutral emotions in text |
+| **Entity Recognition** | Extracts names, numbers, emails, URLs, dates from messages |
+| **Context Memory** | Remembers conversation history for contextual responses |
+| **Real-time Analytics** | Live stats: message count, sentiment distribution, entity count |
+| **Beautiful Web UI** | Dark-themed glassmorphism design with smooth animations |
+| **REST API** | JSON API endpoints for chat, analysis, and statistics |
+| **Expandable Knowledge Base** | Easy to add new topics and responses |
 
-## 🖥️ Screenshots
-
-The chatbot features a 3-panel layout:
-- **Left Panel** — Conversation stats and feature list
-- **Center** — Chat interface with message bubbles and typing indicators
-- **Right Panel** — Real-time NLP analysis (intent, sentiment, entities, confidence)
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology | Purpose |
 |-----------|---------|
 | Python 3.9+ | Core language |
-| Flask | Web server & REST API |
+| Flask | Web server and REST API |
 | Groq API | Llama 3 70B language model |
 | NLTK | Tokenization, lemmatization, stopword removal |
-| Scikit-learn | TF-IDF vectorization & cosine similarity |
+| Scikit-learn | TF-IDF vectorization and cosine similarity |
 | NumPy | Numerical computations |
 | HTML/CSS/JS | Beautiful responsive web interface |
 
-## 🏗️ Architecture
+## Architecture
 
 ```
-┌──────────────────────────────────────────────────┐
-│                  Web Interface                    │
-│   ┌──────────┐  ┌──────────┐  ┌──────────────┐  │
-│   │  Stats   │  │   Chat   │  │  NLP Panel   │  │
-│   │  Panel   │  │  Window  │  │  (Analysis)  │  │
-│   └──────────┘  └────┬─────┘  └──────────────┘  │
-└───────────────────────┼──────────────────────────┘
-                        │ REST API
-┌───────────────────────┼──────────────────────────┐
-│                 Flask Server                      │
-│  ┌────────────────────┼──────────────────────┐   │
-│  │          Conversation Manager              │   │
-│  │  ┌─────────┐  ┌─────────┐  ┌───────────┐ │   │
-│  │  │ Intent  │  │Sentiment│  │  Entity   │ │   │
-│  │  │Classify │  │Analysis │  │Recognition│ │   │
-│  │  └────┬────┘  └────┬────┘  └─────┬─────┘ │   │
-│  │       └─────────┬──┘             │        │   │
-│  │            NLP Engine            │        │   │
-│  │     (TF-IDF + Cosine Sim)       │        │   │
-│  └──────────────────────────────────┘        │   │
-│                                              │   │
-│  ┌──────────────────────────────────┐        │   │
-│  │        Knowledge Base            │        │   │
-│  │  (12+ categories, 50+ patterns) │        │   │
-│  └──────────────────────────────────┘        │   │
-└──────────────────────────────────────────────┘
++---------------------------------------------+
+|           NovaMind Web Interface              |
+|  +--------+  +-----------+  +-------------+  |
+|  | Chat   |  | NLP       |  | Analytics   |  |
+|  | Window |  | Analysis  |  | Dashboard   |  |
+|  +--------+  +-----+-----+  +-------------+  |
++--------------------|------------------------+
+                     | REST API
++--------------------|-----------------------+
+|            Flask Server                     |
+|  +-----------------------------------------+|
+|  |      Conversation Manager               ||
+|  |  +----------------+ +----------------+  ||
+|  |  | NLP Engine     | | Groq AI Client |  ||
+|  |  | (Local)        | | (Llama 3 70B)  |  ||
+|  |  | - Intent       | | - Smart Reply  |  ||
+|  |  | - Sentiment    | | - Context      |  ||
+|  |  | - Entities     | | - Memory       |  ||
+|  |  +----------------+ +----------------+  ||
+|  +-----------------------------------------+|
+|  +-------------------+                      |
+|  | Knowledge Base    |                      |
+|  | (Fallback)        |                      |
+|  +-------------------+                      |
++---------------------------------------------+
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 ```bash
 Python >= 3.8
+Groq API key (free at console.groq.com/keys)
 ```
 
-### Installation & Run
+### Installation
 ```bash
 # Clone the repository
 git clone https://github.com/KHALEDNOAMAN/NovaMind-Chatbot.git
@@ -93,68 +86,50 @@ cd NovaMind-Chatbot
 # Install dependencies
 pip install -r requirements.txt
 
+# Add your Groq API key to .env file
+echo GROQ_API_KEY=your_key_here > .env
+
 # Run the chatbot
 python app.py
 ```
 
-Then open **http://localhost:5000** in your browser! 🌐
+Then open **http://localhost:5000**
 
-## 📡 API Endpoints
+## API Endpoints
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/` | GET | Web chat interface |
+| `/` | GET | Chat interface |
 | `/api/chat` | POST | Send message, get AI response |
 | `/api/stats` | GET | Conversation statistics |
-| `/api/analyze` | POST | Analyze text (sentiment, entities, intent) |
+| `/api/analyze` | POST | Analyze text (sentiment, entities) |
 
-### Example API Call:
+### Example Request
 ```bash
 curl -X POST http://localhost:5000/api/chat \
   -H "Content-Type: application/json" \
-  -d '{"message": "Tell me a joke"}'
+  -d '{"message": "What is machine learning?"}'
 ```
 
-### Response:
-```json
-{
-  "response": "Why do programmers prefer dark mode? Because light attracts bugs! 🐛😄",
-  "intent": "jokes",
-  "confidence": 0.892,
-  "sentiment": { "label": "neutral", "score": 0.0 },
-  "entities": [],
-  "message_count": 1
-}
-```
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 NovaMind-Chatbot/
-├── app.py                  # Main application (Flask + NLP engine)
-├── requirements.txt        # Python dependencies
-├── templates/
-│   └── index.html          # Beautiful chat web interface
-├── LICENSE
-└── README.md
+|-- app.py              # Main application
+|-- requirements.txt    # Python dependencies
+|-- .env               # API key (not committed)
+|-- templates/
+|   +-- index.html     # Chat interface
++-- README.md
 ```
 
-## 🔬 NLP Techniques Used
-
-- **TF-IDF Vectorization** — Converts text to numerical features based on word importance
-- **Cosine Similarity** — Measures similarity between user input and known patterns
-- **Tokenization** — Breaks text into individual words (NLTK)
-- **Lemmatization** — Reduces words to base form ("running" → "run")
-- **Stopword Removal** — Filters out common words ("the", "is", "at")
-- **Named Entity Recognition** — Regex-based extraction of emails, URLs, numbers, dates
-
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
-## 👤 Author
+## Author
 
-**Khaled Noaman** — Computer Engineering Student at Istanbul Arel University
+**Khaled Noaman** - Computer Engineering Student at Istanbul Arel University
 
 - [GitHub](https://github.com/KhaledNoaman)
 - [LinkedIn](https://www.linkedin.com/in/khalednoaman1/)
